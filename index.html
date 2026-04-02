@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hair Restoration Protocol — Key Steps</title>
+  <meta name="description" content="Micro-Extraction, Eco-Preservation, Precision Placement, Rapid Recovery — illustrated protocol overview." />
+  <style>
+    :root{
+      --bg:#f5f7fb; --card:#ffffff; --accent:#0b76d1; --muted:#6b7280; --radius:12px;
+      --max-width:1100px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg); color:#102a43; -webkit-font-smoothing:antialiased;}
+    .container{max-width:var(--max-width);margin:36px auto;padding:0 20px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:26px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,#0b76d1,#3ec6ff);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:14px;font-weight:600}
+    .hero{background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.9));padding:28px;border-radius:var(--radius);display:grid;grid-template-columns:1fr 420px;gap:20px;align-items:center}
+    .hero h1{margin:0;font-size:28px}
+    .hero p{color:var(--muted);margin:10px 0 0}
+    .cta{margin-top:18px}
+    .btn{background:var(--accent);color:#fff;padding:10px 16px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+
+    .steps{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:28px}
+    .card{background:var(--card);padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(16,42,67,0.06);display:flex;gap:14px;align-items:flex-start}
+    .card img{width:120px;height:120px;object-fit:cover;border-radius:8px}
+    .card h3{margin:0;font-size:18px}
+    .card p{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+    section.detail{margin-top:28px;background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(16,42,67,0.04)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+
+    footer{margin:36px 0 80px;color:var(--muted);text-align:center}
+
+    /* lightbox */
+    .lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(2,6,23,0.6);z-index:60}
+    .lightbox.open{display:flex}
+    .lightbox img{max-width:92%;max-height:86%;border-radius:10px;box-shadow:0 20px 50px rgba(2,6,23,0.5)}
+    .close-btn{position:fixed;right:20px;top:20px;background:#fff;border-radius:999px;padding:8px 10px;cursor:pointer;box-shadow:0 6px 18px rgba(2,6,23,0.2)}
+
+    /* responsive */
+    @media(max-width:880px){
+      .hero{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">HR</div>
+        <div>
+          <div style="font-weight:800">Hair Restoration</div>
+          <div style="font-size:13px;color:var(--muted)">Protocol overview</div>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="#steps">Key steps</a>
+        <a href="#details">Details</a>
+        <a href="#resources">Resources</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <h1 id="hero-title">Four-step protocol for precise hair restoration</h1>
+          <p>Illustrated overview of Micro-Extraction, Eco-Preservation, Precision Placement, and Rapid Recovery — optimized for clarity and patient education.</p>
+          <div class="cta">
+            <button class="btn" onclick="scrollToSection('details')">See detailed steps</button>
+          </div>
+          <div style="margin-top:14px;color:var(--muted);font-size:13px">All illustrations are embedded as image assets in the images/ directory.</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:12px;align-items:center">
+          <img src="images/rapid-recovery.png" alt="Rapid Recovery illustration" style="width:100%;height:240px;object-fit:cover;border-radius:10px;box-shadow:0 6px 20px rgba(11,118,209,0.08)">
+          <div style="display:flex;gap:8px;width:100%;justify-content:center">
+            <img src="images/precision-placement.png" alt="Precision Placement thumbnail" style="height:64px;object-fit:cover;border-radius:8px">
+            <img src="images/eco-preservation.png" alt="Eco Preservation thumbnail" style="height:64px;object-fit:cover;border-radius:8px">
+            <img src="images/micro-extraction.png" alt="Micro Extraction thumbnail" style="height:64px;object-fit:cover;border-radius:8px">
+          </div>
+        </div>
+      </section>
+
+      <section id="steps" class="steps" aria-labelledby="steps-title">
+        <div class="card" role="article">
+          <img src="images/micro-extraction.png" alt="Micro Extraction">
+          <div>
+            <h3>Micro-Extraction</h3>
+            <p>Minimally invasive follicular removal using micro-tools; preserves surrounding tissue and reduces trauma.</p>
+            <p style="margin-top:8px"><button class="btn" onclick="openLightbox('images/micro-extraction.png')">View</button></p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/eco-preservation.png" alt="Eco Preservation">
+          <div>
+            <h3>Eco-Preservation</h3>
+            <p>Environmentally-controlled handling to maintain graft viability and hydration during transfer.</p>
+            <p style="margin-top:8px"><button class="btn" onclick="openLightbox('images/eco-preservation.png')">View</button></p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/precision-placement.png" alt="Precision Placement">
+          <div>
+            <h3>Precision Placement</h3>
+            <p>Accurate angulation and depth control — typically near a 45° insertion angle — for natural orientation and density.
+            </p>
+            <p style="margin-top:8px"><button class="btn" onclick="openLightbox('images/precision-placement.png')">View</button></p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/rapid-recovery.png" alt="Rapid Recovery">
+          <div>
+            <h3>Rapid Recovery</h3>
+            <p>Optimized post-procedure care to minimize downtime and accelerate healing, often a 3–5 day recovery window.</p>
+            <p style="margin-top:8px"><button class="btn" onclick="openLightbox('images/rapid-recovery.png')">View</button></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="details" class="detail" aria-labelledby="details-title">
+        <h2 id="details-title">Detailed description</h2>
+        <p style="color:var(--muted)">Below are concise technical notes for each step. Use these for clinician reference or patient-facing educational material.</p>
+
+        <div class="grid" style="margin-top:14px">
+          <article style="background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(16,42,67,0.04)">
+            <h3>Micro-Extraction</h3>
+            <p style="color:var(--muted)">Extraction with ultra-fine punches (typically 0.7–1.0 mm) targeting follicles at an angle matching native hair to avoid transection. Gentle hemostasis and minimal traction preserve graft integrity.</p>
+          </article>
+
+          <article style="background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(16,42,67,0.04)">
+            <h3>Eco-Preservation</h3>
+            <p style="color:var(--muted)">Store grafts in isotonic, chilled solutions, minimize air exposure, and limit out-of-body time. Use cushioned handling trays and maintain 4–8°C for short-term storage when indicated.</p>
+          </article>
+
+          <article style="background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(16,42,67,0.04)">
+            <h3>Precision Placement</h3>
+            <p style="color:var(--muted)">Use high-precision instruments, plan recipient sites with attention to hairline design, and insert grafts with correct depth and 30–45° angulation to match native pattern and minimize popping.</p>
+          </article>
+
+          <article style="background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(16,42,67,0.04)">
+            <h3>Rapid Recovery</h3>
+            <p style="color:var(--muted)">Apply targeted cooling, short-term anti-inflammatories when appropriate, and provide patient instructions for wound care. Monitor for signs of infection and schedule follow-up within the first week.</p>
+          </article>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+          <button class="btn" onclick="downloadZip()">Download site ZIP</button>
+          <a href="#resources" style="color:var(--muted);text-decoration:underline">Hosting & deployment guide</a>
+        </div>
+      </section>
+
+      <section id="resources" style="margin-top:20px">
+        <h2 style="margin-bottom:6px">Resources</h2>
+        <p style="color:var(--muted);margin-top:0">Instructions to host this single-page site on GitHub Pages or Cloudflare Pages: place this index.html at the repo root, add the images/ folder with the illustrations, then point your site to the repository.</p>
+      </section>
+
+    </main>
+
+    <footer>
+      © Hair Restoration — Illustrations provided. Built for static hosting.
+    </footer>
+  </div>
+
+  <!-- Lightbox markup -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-hidden="true">
+    <button class="close-btn" aria-label="Close" onclick="closeLightbox()">✕</button>
+    <img id="lightbox-img" src="" alt="Expanded illustration">
+  </div>
+
+  <script>
+    function openLightbox(src){
+      const lb = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      img.src = src; lb.classList.add('open'); lb.setAttribute('aria-hidden','false');
+    }
+    function closeLightbox(){
+      const lb = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      img.src = '';
+      lb.classList.remove('open'); lb.setAttribute('aria-hidden','true');
+    }
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeLightbox(); });
+    function scrollToSection(id){ document.getElementById(id).scrollIntoView({behavior:'smooth'}); }
+
+    // Dummy ZIP downloader placeholder: the actual ZIP will be provided server-side or by assistant on request.
+    function downloadZip(){
+      alert('I can package the site into a ZIP and provide it — would you like me to create the ZIP now?');
+    }
+  </script>
+</body>
+</html>
